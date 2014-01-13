@@ -10,6 +10,10 @@ class BitCounter
     as_string.unpack('B*').first
   end
 
+  def count(bit)
+    as_binary_string.count(bit)
+  end
+
 private
 
   def as_string
