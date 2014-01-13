@@ -9,7 +9,18 @@ describe BitCounter do
     end
 
     it "returns a binary representation of the file's body as a string" do
-      expect(counter.as_binary_string.chars.uniq).to eq(%w(1 0))
+      expect(counter.as_binary_string.chars.uniq.sort).to eq(%w(0 1))
+    end
+  end
+
+  context 'a text file' do
+
+    subject(:counter) do
+      BitCounter.new(with_fullpath('assets/file.txt'))
+    end
+
+    it "returns a binary representation of the file's body as a string" do
+      expect(counter.as_binary_string.chars.uniq.sort).to eq(%w(0 1))
     end
   end
 end
