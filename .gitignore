@@ -1,0 +1,4 @@
+/.bundle
+/coverage
+*.swp
+.DS_Store
