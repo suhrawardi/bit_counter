@@ -15,11 +15,11 @@ shared_examples 'a bit counter' do |expected_bits|
 
   describe '#count' do
 
-    it 'returns the number of 0 bits' do
+    it 'returns the number of bits set to 0' do
       expect(counter.count('0')).to eq(expected_bits['0'])
     end
 
-    it 'returns the number of 1 bits' do
+    it 'returns the number of bits set to 1' do
       expect(counter.count('1')).to eq(expected_bits['1'])
     end
 
